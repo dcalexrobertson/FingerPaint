@@ -7,23 +7,27 @@
 //
 
 #import "FingerPainterView.h"
+#import "Line.h"
 
 @implementation FingerPainterView
 
-- (UIBezierPath *)path
+- (void)awakeFromNib
 {
-    if (!_path) {
-        _path = [UIBezierPath new];
-    }
-    return _path;
+    
+    self.lines = [NSMutableArray new];
+    
 }
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 
 - (void)drawRect:(CGRect)rect {
-    [self.currentColor setStroke];
-    [self.path stroke];
+    
+    for (Line *line in self.lines) {
+        [line.color setStroke];
+        [line.path stroke];
+    }
+    
 }
 
 

@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "FingerPainterView.h"
+#import "Line.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet FingerPainterView *fpView;
+@property (nonatomic) UIColor *currentColor;
 @property (weak, nonatomic) IBOutlet UIView *colorMenuView;
 @property (weak, nonatomic) IBOutlet UILabel *chooseColorLabel;
 @end
@@ -20,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.currentColor = [UIColor blackColor];
 
 }
 
@@ -32,11 +34,19 @@
 - (IBAction)pgRecog:(UIPanGestureRecognizer *)sender {
     
     if (sender.state == UIGestureRecognizerStateBegan) {
+        
+        // new line
+        Line *newLine = [[Line alloc] initWithColor:self.currentColor];
+        [self.fpView.lines addObject:newLine];
+        
         CGPoint point = [sender locationInView:self.fpView];
-        [self.fpView.path moveToPoint:point];
+        [newLine.path moveToPoint:point];
+        
     } else if (sender.state == UIGestureRecognizerStateChanged) {
+        
+        Line *newLine = [self.fpView.lines lastObject];
         CGPoint point = [sender locationInView:self.fpView];
-        [self.fpView.path addLineToPoint:point];
+        [newLine.path addLineToPoint:point];
     }
     
     [self.fpView setNeedsDisplay];
@@ -50,27 +60,27 @@
 }
 - (IBAction)chooseBlack:(id)sender {
     self.chooseColorLabel.textColor = [UIColor blackColor];
-    self.fpView.currentColor = [UIColor blackColor];
+    self.currentColor = [UIColor blackColor];
 }
 - (IBAction)chooseBlue:(id)sender {
     self.chooseColorLabel.textColor = [UIColor blueColor];
-    self.fpView.currentColor = [UIColor blueColor];
+    self.currentColor = [UIColor blueColor];
 }
 - (IBAction)chooseBrown:(id)sender {
     self.chooseColorLabel.textColor = [UIColor brownColor];
-    self.fpView.currentColor = [UIColor brownColor];
+    self.currentColor = [UIColor brownColor];
 }
 - (IBAction)chooseCyan:(id)sender {
     self.chooseColorLabel.textColor = [UIColor cyanColor];
-    self.fpView.currentColor = [UIColor cyanColor];
+    self.currentColor = [UIColor cyanColor];
 }
 - (IBAction)chooseGreen:(id)sender {
     self.chooseColorLabel.textColor = [UIColor greenColor];
-    self.fpView.currentColor = [UIColor greenColor];
+    self.currentColor = [UIColor greenColor];
 }
 - (IBAction)chooseMagenta:(id)sender {
     self.chooseColorLabel.textColor = [UIColor magentaColor];
-    self.fpView.currentColor = [UIColor magentaColor];
+    self.currentColor = [UIColor magentaColor];
 }
 
 

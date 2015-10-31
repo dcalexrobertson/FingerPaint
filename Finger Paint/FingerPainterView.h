@@ -10,7 +10,6 @@
 
 @interface FingerPainterView : UIView
 
-@property (nonatomic) UIBezierPath *path;
-@property (nonatomic) UIColor *currentColor;
+@property (nonatomic) NSMutableArray *lines;
 
 @end

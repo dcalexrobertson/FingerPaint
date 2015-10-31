@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Line : UIView
+@interface Line : NSObject
+
+@property (nonatomic) UIBezierPath *path;
+@property (nonatomic) UIColor *color;
+
+- (instancetype)initWithColor:(UIColor *)color;
 
 @end

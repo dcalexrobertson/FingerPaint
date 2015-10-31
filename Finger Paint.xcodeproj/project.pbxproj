@@ -16,7 +16,7 @@
 		FA7559C71BE3F43900A2FE41 /* Finger_PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7559C61BE3F43900A2FE41 /* Finger_PaintTests.m */; };
 		FA7559D21BE3F43900A2FE41 /* Finger_PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7559D11BE3F43900A2FE41 /* Finger_PaintUITests.m */; };
 		FA7559E11BE3F49200A2FE41 /* FingerPainterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7559E01BE3F49200A2FE41 /* FingerPainterView.m */; settings = {ASSET_TAGS = (); }; };
-		FA7559E71BE4400400A2FE41 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7559E61BE4400400A2FE41 /* Line.m */; settings = {ASSET_TAGS = (); }; };
+		FA7559EA1BE447A400A2FE41 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7559E91BE447A400A2FE41 /* Line.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		FA7559D31BE3F43900A2FE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA7559DF1BE3F49200A2FE41 /* FingerPainterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPainterView.h; sourceTree = "<group>"; };
 		FA7559E01BE3F49200A2FE41 /* FingerPainterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerPainterView.m; sourceTree = "<group>"; };
-		FA7559E51BE4400400A2FE41 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
-		FA7559E61BE4400400A2FE41 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		FA7559E81BE447A400A2FE41 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		FA7559E91BE447A400A2FE41 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +114,8 @@
 				FA7559B51BE3F43900A2FE41 /* Main.storyboard */,
 				FA7559DF1BE3F49200A2FE41 /* FingerPainterView.h */,
 				FA7559E01BE3F49200A2FE41 /* FingerPainterView.m */,
-				FA7559E51BE4400400A2FE41 /* Line.h */,
-				FA7559E61BE4400400A2FE41 /* Line.m */,
+				FA7559E81BE447A400A2FE41 /* Line.h */,
+				FA7559E91BE447A400A2FE41 /* Line.m */,
 				FA7559B81BE3F43900A2FE41 /* Assets.xcassets */,
 				FA7559BA1BE3F43900A2FE41 /* LaunchScreen.storyboard */,
 				FA7559BD1BE3F43900A2FE41 /* Info.plist */,
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7559E71BE4400400A2FE41 /* Line.m in Sources */,
+				FA7559EA1BE447A400A2FE41 /* Line.m in Sources */,
 				FA7559B41BE3F43900A2FE41 /* ViewController.m in Sources */,
 				FA7559B11BE3F43900A2FE41 /* AppDelegate.m in Sources */,
 				FA7559AE1BE3F43900A2FE41 /* main.m in Sources */,
